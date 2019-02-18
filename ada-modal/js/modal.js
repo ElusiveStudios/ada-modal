@@ -11,7 +11,6 @@ window.addEventListener('keydown', escapeCloseModal);
 	
 //Open Modal
 openModalBtn.addEventListener('click', function(e) {
-	e.stopPropagation();
 	openModal();
 	setupTabIndex();
 	restrictModalFocus(this);
@@ -19,7 +18,6 @@ openModalBtn.addEventListener('click', function(e) {
 
 //Close Modal
 closeModalBtn.addEventListener('click', function(e) {
-	e.stopPropagation();
 	closeModal();
 });	
 
