@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<head>
+			<title>ADA Compliant Modal</title>
+			<meta charset="utf-8">
+			<link href="css/modal.css" rel="stylesheet">
+		</head>
+
+		<header>
+			<h1 class="demo-title">ADA Compliant Modal Demo</h1>
+			<hr>
+		</header>
+
+		<div>
+			<p class="demo-body">Please click the button below to open the test modal</p>
+			<div class="demo-btn-container">
+				<button class="demo-btn" id="openModal">Test Modal</button>
+			</div>
+		</div>
+
+		<!-- HTML Markup for the modal window (this is the stuff you want) -->
+		<div class="modal" id="modal" role="dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close popup window" class="modal-close-button" id="closeModal">&times;</button>
+					<h2 id="modalTitle">Super Rad Modal</h2>
+				</div>
+
+				<div class="modal-body">
+					<p class="body" id="modalBody">
+						This modal window is ADA compliant, with all elements
+						able to be tabbed to. Pressing enter while on the close or 
+						submit buttons will activate it's event. You may also hit escape (esc)
+						to close the modal at anytime.<br><br>
+						The background will be visually greyed out and cannot be interacted with
+						while the modal is open. Scrolling is also disabled.
+					</p>
+				</div>
+
+				<div class="modal-action-container">
+					<button class="modal-action-button" id="modalAction">Continue</button>
+				</div>
+			</div>
+		</div>
+		<!-- END: HTML Markup for the modal window -->
+
+		<script src="js/modal.js"></script>
+
+		<!-- styles specific for the demonstration -->
+		<style>
+			.demo-title {
+				color: #188cff;
+				text-align: center;
+			}
+
+			.demo-body, .demo-btn-container {
+				text-align: center;
+			}
+
+			.demo-btn {
+				border: none;
+				background-color: #ff7118;
+				color: white;
+				padding: 7px 18px;
+				border-radius: 5px;
+			}
+		</style>
+		<!-- script specific to demo -->
+		<script>
+			document.getElementById('modalAction').onclick = function() { alert('Whatever you want to do on modal button click!'); }
+		</script>
+	</body>
+</html>
